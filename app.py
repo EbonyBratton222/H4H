@@ -25,7 +25,11 @@ st.markdown(
     """
     <style>
     html, body, [class*="css"], .stMarkdown, .stTextArea textarea, .stSelectbox { font-size: 1.15rem; }
-    .stMarkdown p, .stMarkdown li { font-size: 1.15rem; line-height: 1.6; color: inherit; }
+    .stMarkdown p, .stMarkdown li { font-size: 1.15rem; line-height: 1.6; }
+    .emergency {
+        background: #b00020; color: #ffffff; font-weight: 700; font-size: 1.4rem;
+        padding: 1rem 1.25rem; border-radius: 0.5rem; margin-bottom: 1rem;
+    }
     </style>
     """,
     unsafe_allow_html=True,
@@ -55,7 +59,10 @@ plan = st.session_state.get("plan")
 if plan:
     text = st.session_state["text"]
     if is_emergency(text):
-        st.error(f"**{EMERGENCY_MESSAGE}**")
+        st.markdown(
+            f'<div class="emergency" role="alert">🚨 {EMERGENCY_MESSAGE}</div>',
+            unsafe_allow_html=True,
+        )
     if mentions_ndis(text):
         st.info(NDIS_MESSAGE)
     st.markdown(plan)
