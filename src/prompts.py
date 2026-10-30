@@ -19,7 +19,7 @@ Rules:
 Reply in Markdown with exactly these sections, under 350 words total:
 ## What you're describing (3-5 bullets turning their words into aged-care terms)
 ## Your region at a glance (2-3 sentences)
-## What usually happens next (4 numbered steps)
+## What usually happens next (4 numbered steps from FACTS; in each step add one short line on what it means for THIS person, using details from their description, e.g. what to mention at that step)
 ## Before you call (a short checklist, plus 3 questions to ask the assessor)
 ## Good to know (1-2 honest limits; check myagedcare.gov.au)
 """
