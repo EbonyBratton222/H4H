@@ -1,6 +1,7 @@
 # secrets
 .env
 *.env
+!sample.env
 .streamlit/secrets.toml
 # data you may not publish: name each Snowflake Marketplace export
 # data/my_marketplace_export.csv
