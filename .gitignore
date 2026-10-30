@@ -1,0 +1,11 @@
+# Organisers' reference files
+h4h-adelaide-2026-main/
+
+# Secrets and temporary files
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+.venv/
+__pycache__/
+node_modules/
