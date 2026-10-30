@@ -1,6 +1,7 @@
 # secrets
 .env
 *.env
+.env.*
 !sample.env
 .streamlit/secrets.toml
 # data you may not publish: name each Snowflake Marketplace export
@@ -10,5 +11,7 @@
 venv/
 __pycache__/
 *.pyc
+.pytest_cache/
 .ipynb_checkpoints/
 .DS_Store
+Thumbs.db

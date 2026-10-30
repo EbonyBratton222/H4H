@@ -145,18 +145,23 @@ cases passed and no numbers were flagged.
 ## Project structure
 
 ```
-H4H/
+First-Call/
 ├── app.py                  Streamlit page (the UI)
 ├── src/
 │   ├── data_prep.py        Builds data/sa_regions.csv from the AIHW spreadsheet
 │   ├── gemma.py            ask() for the Gemini API, ask_local() for Ollama
 │   ├── prompts.py          Gemma's rules and the verified facts (plain text, safe to edit)
-│   └── safety.py           Emergency and NDIS keyword checks
+│   ├── safety.py           Emergency and NDIS keyword checks
+│   └── snowflake_load.py   Optional: loads the synthetic CSVs into Snowflake
 ├── tests/
 │   └── run_cases.py        Four example families, with a number check
 ├── data/
 │   ├── a3_acpr_2024_25.xlsx  AIHW source spreadsheet (CC BY 4.0)
-│   └── sa_regions.csv        The 11 SA regions we use
+│   ├── sa_regions.csv        The 11 SA regions we use
+│   └── synthetic/            Made-up facilities and appointment slots (demo only)
+├── snowflake/
+│   └── setup.sql           Optional: Snowflake tables for the synthetic data
+├── sample.env              Placeholder settings; copy to .env
 ├── requirements.txt
 ├── LICENSE                 MIT
 └── README.md
@@ -190,7 +195,7 @@ You need Python 3.10 or newer (we used 3.12) and a free Gemini API key. It takes
 
 ```
 git clone https://github.com/quietbranchtree/First-Call.git
-cd H4H
+cd First-Call
 ```
 
 (Or click **Code → Download ZIP** on GitHub, unzip it, and open a terminal in that folder.)
@@ -262,7 +267,8 @@ Your browser opens at http://localhost:8501. Press Ctrl + C in the terminal to s
 
 ## Team
 
-[Your names, if you want them here.]
+Built by a team at Hack for Humanity Adelaide 2026. Maintained by
+[quietbranchtree](https://github.com/quietbranchtree).
 
 ## Licence
 
